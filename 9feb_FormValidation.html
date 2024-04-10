@@ -1,0 +1,76 @@
+<!-- placeholder,required field,select option, -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .n3{
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <fieldset style="width: fit-content; margin: auto;">
+    <legend><h1><u>Registration Form</u></h1></legend>
+    <div style="margin: auto;">
+    <form novalidate onsubmit="return validation()">
+        <label for="name">Name:&nbsp;<input type="text" id="n1" placeholder="Enter your name" style="margin: 5px;"></label><br>
+        <span id="n2" class="n3"></span>
+        <label for="name">D.O.B:<input type="date" style="margin: 5px;"></label><br>
+        <label for="name">Age:&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="Enter your age" min="18" max="40" style="margin: 5px;" size="50px"></label><br>
+        <label for="email">Email:&nbsp;<input type="email" style="margin: 5px;" placeholder="Enter your email"></label><br>
+        <label for="password">Password:<input type="password" style="margin: 5px; " id="p" placeholder="Set your password" minlength="8"></label><br>
+        <label for="confirm password">Confirm password:<input type="password" style="margin: 5px;" placeholder="confirm our password"></label><br>
+        <fieldset style="width: fit-content; text-align: center;">
+        <legend>Gender</legend>
+
+            Male:<input type="radio" name="gender" id="Male">
+            Female:<input type="radio" name="gender" id="Female">
+            Others:<input type="radio" name="gender" id="Others" style="margin: 5px;"><br>
+        </fieldset>
+      
+        <label for="country">Country:</label>
+        <Select name="country" id="country" style="margin: 5px;">
+            <option value="">--Select Your Country--</option>
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="Russia">Russia</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+        </Select><br>
+
+        <textarea name="Suggestions" id="" cols="30" rows="10" placeholder="Add more information about you" style="height: 50px; margin-top: 5px;" required></textarea><br>
+        <p><input type="checkbox" name="tc" id="tc"> I agree to the terms and conditions</p>
+
+        <input type="submit" value="Submit"><br>
+        <!-- <iframe width="560" height="315" style="margin-top: 15px;" src="https://www.youtube.com/embed/9fbLnFPetXo?si=77Q884sC2J4fWhxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        <script>
+            function validation()
+            {
+                var a=document.getElementById("n1")
+                // var pass=document.getElementById("pass")
+                if(a.value=="")
+                {
+                    // isvalid=true
+                    // alert("Name field is mandatory");
+                    document.getElementById("n2").innerHTML="Name is Mandatory"
+                    // document.getElementById("n1").placeholder="Name is Mandatory"
+                    // isvalid=false
+                    event.preventDefault();
+                }
+
+                // return isvalid
+
+
+            }
+        </script>
+        </form>   
+    </div>  
+</fieldset>
+</body>
+</html>
